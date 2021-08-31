@@ -15,7 +15,7 @@ const introh2 = intro.querySelector('h2');
 const introtext = intro.querySelector('p');
 
 //content section getters
-const contentSection = containerHome.querySelector('.content-secttion');
+// const contentSection = containerHome.querySelector('.content-secttion');
 // const contenth2 = contentSection.querySelector('.text-content h2');
 // const contentimg = contentSection.querySelector('.img-content img');
 
@@ -34,8 +34,8 @@ const destination = contentDestination.querySelector('destination');
 // body.style.backgroundColor = 'red';  
 // console.log('im noticed');
 
-
-intro.addEventListener('mousedown', (event) => {
+//click
+intro.addEventListener('click', (event) => {
     console.log(event.target);
     if(event.target === introimg)
     {
@@ -45,19 +45,29 @@ intro.addEventListener('mousedown', (event) => {
     }
 });
 
-function kevent(event){
+//keydown
+function keyEvent(event){
     if(event.key === 'a'){
         console.log('a was pressed');
+        event.stopPropagation();
     }
 }
-document.addEventListener('keydown',kevent);
+document.addEventListener('keypress',keyEvent);
 
-
+//todo wheel
 function fade(event){
     event.target.style.opacity =+ event.deltaY
 }
 intro.addEventListener('wheel', fade)
 
+//mouseover note: does not work with devtools up
 logoh1.addEventListener('mouseover', function( event ) {
     event.target.style.color = "orange"
 });
+//load
+window.addEventListener('load', () => body.style.backgroundColor ='#14f4f4');
+
+//focus. on form stuff
+
+//resize only works on window
+window.addEventListener('resize', () => body.style.backgroundColor = 'pink');
