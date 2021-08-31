@@ -35,11 +35,29 @@ const destination = contentDestination.querySelector('destination');
 // console.log('im noticed');
 
 
-intro.addEventListener('click', (event) => {
+intro.addEventListener('mousedown', (event) => {
     console.log(event.target);
     if(event.target === introimg)
     {
     console.log('hit it');
-    introimg.style.opacity = '0';
+
+    introimg.style.display = 'none';
     }
+});
+
+function kevent(event){
+    if(event.key === 'a'){
+        console.log('a was pressed');
+    }
+}
+document.addEventListener('keydown',kevent);
+
+
+function fade(event){
+    event.target.style.opacity =+ event.deltaY
+}
+intro.addEventListener('wheel', fade)
+
+logoh1.addEventListener('mouseover', function( event ) {
+    event.target.style.color = "orange"
 });
