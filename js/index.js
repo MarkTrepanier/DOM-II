@@ -15,7 +15,7 @@ const introh2 = intro.querySelector('h2');
 const introtext = intro.querySelector('p');
 
 //content section getters
-//const contentSection = containerHome.querySelector('.content-secttion');
+const contentSection = containerHome.querySelector('.content-secttion');
 // const contenth2 = contentSection.querySelector('.text-content h2');
 // const contentimg = contentSection.querySelector('.img-content img');
 
@@ -29,17 +29,15 @@ const contentDestination = containerHome.querySelector('.content-destination');
 const destination = contentDestination.querySelector('destination');
 //const btn = destination:nth-of-type??
 
-testing
-introtext.textContent = 'can you read me';
-body.style.backgroundColor = 'red';  
-console.log('im noticed')
+//testing
+// introtext.textContent = 'can you read me';
+// body.style.backgroundColor = 'red';  
+// console.log('im noticed');
 
-function appear(event){
-    introimg.src = '0';
-}
-intro.addEventListener('onclick', (event) => {
+
+intro.addEventListener('click', (event) => {
     console.log(event.target);
-    if(event.target === intro)
+    if(event.target === introimg)
     {
     console.log('hit it');
     introimg.style.opacity = '0';
