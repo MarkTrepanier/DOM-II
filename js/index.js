@@ -69,5 +69,5 @@ window.addEventListener('load', () => body.style.backgroundColor ='#14f4f4');
 
 //focus. on form stuff
 
-//resize only works on window
+//resize only works on windows
 window.addEventListener('resize', () => body.style.backgroundColor = 'pink');
